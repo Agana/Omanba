@@ -1,4 +1,3 @@
-from models import Gh_Vid, Donate, Article, Extras
 from django.conf.urls.defaults import *
 from django.contrib import admin
 

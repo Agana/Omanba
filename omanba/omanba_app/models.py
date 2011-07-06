@@ -52,3 +52,8 @@ class Gh_VidAdmin(admin.ModelAdmin):
 	list_display=('gh_vid_title','gh_file','gh_vid_body')
 
 
+admin.site.register(Article)
+admin.site.register(Extras)
+admin.site.register(Gh_Vid)
+admin.site.register(Donate)
+
