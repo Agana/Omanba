@@ -6,33 +6,58 @@ class News(models.Model):
 	news_Headlines=models.CharField(max_length=300)
 	news_date=models.DateTimeField('date published')
 	news_body=models.TextField()
+	def __unicode__(self):
+		return self.news_title
 
 class Sports(models.Model):
 	sports_title=models.CharField(max_length=200)
 	sports_Headlines=models.CharField(max_length=300)
 	sports_date=models.DateTimeField('date published')
 	sports_body=models.TextField()
+	def __unicode__(self):
+		return self.sports_title
 
 class Politics(models.Model):
 	politics_title=models.CharField(max_length=200)
 	politics_Headlines=models.CharField(max_length=300)
 	politics_date=models.DateTimeField('date published')
 	politics_body=models.TextField()
+	def __unicode__(self):
+		return self.politics_title
 
 class Extras(models.Model):
 	extras_title=models.CharField(max_length=200)
 	extras_headlines=models.CharField(max_length=300)
 	extras_date=models.DateTimeField('date published')
 	extras_body=models.TextField()
+	def __unicode__(self):
+		return self.extras_title
 
-class Gh-Vid(models.Model):
+class Gh_Vid(models.Model):
 	gh_vid_title=models.CharField(max_length=200)
 	gh_vid_body=models.TextField()
 	gh_file = models.FileField(upload_to='home/aiti/Desktop/')
+	def __unicode__(self):
+		return self.gh_vid_title
 	
 class Donate(models.Model):
 	project_title=models.CharField(max_length=200)
 	project_body=models.TextField()
 	project_author=models.CharField(max_length=60)
-	
-# Create your models here.
+	def __unicode__(self):
+		return self.project_title
+
+class Lifestyle(models.Model):
+	lifest_title=models.CharField(max_length=200)
+	lifest_body=models.TextField()
+	lifest_author=models.CharField(max_length=60)
+	def __unicode__(self):
+		return self.lifest_title
+		
+admin.site.register(News)
+admin.site.register(Politics)
+admin.site.register(Gh_Vid)
+admin.site.register(Extras)
+admin.site.register(Donate)
+admin.site.register(Sports)
+admin.site.register(Lifestyle)
