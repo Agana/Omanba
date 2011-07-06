@@ -45,32 +45,16 @@ class Donate(models.Model):
 	def __unicode__(self):
 		return self.project_title
 
-<<<<<<< HEAD
-
-=======
-
-
-
-
-
 class ExtrasAdmin(admin.ModelAdmin):
 	list_display=('extras_title','extras_headlines','extras_body')
->>>>>>> 4d5a6750f01f5e8d8c6bf79983c87bf40cb48df8
 
 
-
-<<<<<<< HEAD
 admin.site.register(Article)
 admin.site.register(Extras)
 admin.site.register(Gh_Vid)
 admin.site.register(Donate)
-
-=======
-
-
-
 admin.site.register(Gh_Vid,Gh_VidAdmin)
 admin.site.register(Extras,ExtrasAdmin)
 admin.site.register(Donate,DonateAdmin)
 admin.site.register(Article)
->>>>>>> 4d5a6750f01f5e8d8c6bf79983c87bf40cb48df8
+

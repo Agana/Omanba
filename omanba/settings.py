@@ -116,9 +116,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-<<<<<<< HEAD
-    'omanba',
-=======
+    #'omanba',
     'omanba_app',
 >>>>>>> 4d5a6750f01f5e8d8c6bf79983c87bf40cb48df8
     # Uncomment the next line to enable the admin:
