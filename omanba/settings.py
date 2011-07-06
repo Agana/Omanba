@@ -106,19 +106,24 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    "/home/aiti/omanba/templates"
+
 )
 
 INSTALLED_APPS = (
     'django.contrib.auth',
-
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+<<<<<<< HEAD
     #'omanba',
+=======
+
+>>>>>>> 34fb685c878539a18e830eacc34a76d8712cc3a5
     'omanba_app',
->>>>>>> 4d5a6750f01f5e8d8c6bf79983c87bf40cb48df8
+
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:

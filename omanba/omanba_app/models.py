@@ -8,20 +8,12 @@ class Article(models.Model):
 	title= models.CharField(max_length=200)
 	headline=models.CharField(max_length=300)
 	date_created=models.DateTimeField('date published')
-<<<<<<< HEAD
+
 	ARTICLE_CHOICES=(('news', 'News'), ('lifestyle', 'Lifestyle'), ('politics', 'Politics'), ('extras', 'Extras'), ('sports', 'Sports'),)
 	article_type=models.CharField(max_length=6, choices=ARTICLE_CHOICES)
 	def __unicode__(self):
 		return self.title
 
-
-=======
-	STATUS_CHOICES=(('news', 'News'), ('lifestyle', 'Lifestyle'), ('politics', 'Politics'), ('extras', 'Extras'), ('sports', 'Sports'),)
-	article_type=models.CharField(max_length=6, choices=STATUS_CHOICES)
-	def __unicode__(self):
-		return self.title
-
->>>>>>> 4d5a6750f01f5e8d8c6bf79983c87bf40cb48df8
 
 class Extras(models.Model):
 	extras_title=models.CharField(max_length=200)
@@ -45,16 +37,36 @@ class Donate(models.Model):
 	def __unicode__(self):
 		return self.project_title
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 34fb685c878539a18e830eacc34a76d8712cc3a5
 class ExtrasAdmin(admin.ModelAdmin):
 	list_display=('extras_title','extras_headlines','extras_body')
 
 
+<<<<<<< HEAD
+=======
+class DonateAdmin(admin.ModelAdmin):
+	list_display=('project_title','project_author','project_body')
+
+class Gh_VidAdmin(admin.ModelAdmin):
+	list_display=('gh_vid_title','gh_file','gh_vid_body')
+
+
+>>>>>>> 34fb685c878539a18e830eacc34a76d8712cc3a5
 admin.site.register(Article)
 admin.site.register(Extras)
 admin.site.register(Gh_Vid)
 admin.site.register(Donate)
+<<<<<<< HEAD
 admin.site.register(Gh_Vid,Gh_VidAdmin)
 admin.site.register(Extras,ExtrasAdmin)
 admin.site.register(Donate,DonateAdmin)
 admin.site.register(Article)
+=======
+>>>>>>> 34fb685c878539a18e830eacc34a76d8712cc3a5
 
