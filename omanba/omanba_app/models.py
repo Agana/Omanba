@@ -1,5 +1,15 @@
+
 from django.db import models
 from django.contrib import admin
+
+class Article(models.Model):
+	title= models.CharField(max_length=200)
+	headline=models.CharField(max_length=300)
+	date_created=models.DateTimeField('date published')
+	article_options=((news, News), (lifestyle, Lifestyle), (politics, Politics), (extras, Extras), (sports, Sports))
+	article_type=models.CharField(max_length=6, choices=article_options)
+	def __unicode__(self):
+		return self.title
 
 class News(models.Model):
 	news_title=models.CharField(max_length=200)
@@ -53,11 +63,34 @@ class Lifestyle(models.Model):
 	lifest_author=models.CharField(max_length=60)
 	def __unicode__(self):
 		return self.lifest_title
-		
-admin.site.register(News)
-admin.site.register(Politics)
-admin.site.register(Gh_Vid)
-admin.site.register(Extras)
-admin.site.register(Donate)
-admin.site.register(Sports)
-admin.site.register(Lifestyle)
+	
+
+
+class NewsAdmin(admin.ModelAdmin):
+	list_display=('news_title','news_Headlines','news_body')
+
+class SportsAdmin(admin.ModelAdmin):
+	list_display=('sports_title','sports_Headlines','sports_body')
+
+class PoliticsAdmin(admin.ModelAdmin):
+	list_display=('politics_title','politics_Headlines','politics_body')
+
+class ExtrasAdmin(admin.ModelAdmin):
+	list_display=('extras_title','extras_Headlines','extras_body')
+
+class Gh_VidAdmin(admin.ModelAdmin):
+	list_display=('gh_vid_title','gh_vid_body','gh_file')
+
+class DonateAdmin(admin.ModelAdmin):
+	list_display=('project_title','project_author','project_body')
+
+class LifestyleAdmin(admin.ModelAdmin):
+	list_display=('lifest_title','lifest_author','lifest_body')
+
+admin.site.register(News,NewsAdmin)
+admin.site.register(Politics,PoliticsAdmin)
+admin.site.register(Gh_Vid,Gh_VidAdmin)
+admin.site.register(Extras,ExtrasAdmin)
+admin.site.register(Donate,DonateAdmin)
+admin.site.register(Sports,SportsAdmin)
+admin.site.register(Lifestyle,LifestyleAdmin)
