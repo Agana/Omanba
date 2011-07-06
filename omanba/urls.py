@@ -6,7 +6,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    url(r'^omanba_app$', 'omanba_app.views.index', name='home'),
+    #url(r'^omanba_app$', 'omanba_app.views.index', name='home'),
     #url(r'^omanba/', include('omanba.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
@@ -14,4 +14,5 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^omanba_app/', include('omanba.omanba_app.urls')),
 )
