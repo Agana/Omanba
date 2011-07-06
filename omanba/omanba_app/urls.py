@@ -18,7 +18,7 @@ urlpatterns = patterns('',
 	url(r'^donatedetail(?P<id>\d+)/$', 'omanba_app.views.extras_detail'),
 	url(r'^extraslist/$', 'omanba_app.views.extras_list'),
 	url(r'^extrasdetail(?P<id>\d+)/$', 'omanba_app.views.extras_detail'),
-	
+	url(r'^omanba_app/$', 'omanba_app.views.index'),
 	
 	
 	
