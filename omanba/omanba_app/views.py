@@ -1,6 +1,6 @@
 from django.template import Context, loader
 from django.http import HttpResponse
-from models import Gh_Vid, Donate,Extras
+from models import Gh_Vid, Donate,Extras, Article
 from django.template import Context, loader
 from django.forms import ModelForm
 from django.views.decorators.csrf import csrf_exempt
