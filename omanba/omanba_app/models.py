@@ -7,8 +7,8 @@ from django.contrib import admin
 class Article(models.Model):
 	title= models.CharField(max_length=200)
 	headline=models.CharField(max_length=300)
-	date_created=models.DateTimeField('date published')
-
+	date_created=models.DateTimeField(auto_now=True)
+	body= models.TextField()
 	ARTICLE_CHOICES=(('news', 'News'), ('lifestyle', 'Lifestyle'), ('politics', 'Politics'), ('extras', 'Extras'), ('sports', 'Sports'),)
 	article_type=models.CharField(max_length=6, choices=ARTICLE_CHOICES)
 	def __unicode__(self):
@@ -30,7 +30,7 @@ class Gh_Vid(models.Model):
 	def __unicode__(self):
 		return self.gh_vid_title
 	
-class Donate(models.Model):
+class Donation(models.Model):
 	project_title=models.CharField(max_length=200)
 	project_body=models.TextField()
 	project_author=models.CharField(max_length=60)
@@ -61,6 +61,7 @@ class Gh_VidAdmin(admin.ModelAdmin):
 admin.site.register(Article)
 admin.site.register(Extras)
 admin.site.register(Gh_Vid)
+<<<<<<< HEAD
 admin.site.register(Donate)
 <<<<<<< HEAD
 admin.site.register(Gh_Vid,Gh_VidAdmin)
@@ -69,4 +70,7 @@ admin.site.register(Donate,DonateAdmin)
 admin.site.register(Article)
 =======
 >>>>>>> 34fb685c878539a18e830eacc34a76d8712cc3a5
+=======
+admin.site.register(Donation)
+>>>>>>> d8d46ee45de97530337c614eeb79eba4ad9b4dd1
 
