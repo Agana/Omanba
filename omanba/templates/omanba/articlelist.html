@@ -1,0 +1,11 @@
+{% extends "omanba/index.html" %}
+{% block content %}
+<p align = "center">Articles</p>
+
+<li><a href="/omanba/newslist">{{ type_news.get_article_type_display }}</a></li>
+<li><a href="/omanba/sportslist">{{ type_sports.get_article_type_display }}</a></li>
+<li><a href="/omanba/politicslist">{{ type_politics.get_article_type_display }}</a></li>
+<li><a href="/omanba/lifestylelist">{{ type_lifestyle.get_article_type_display }}</a></li>
+
+
+{% endblock %}

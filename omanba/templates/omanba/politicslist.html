@@ -1,0 +1,10 @@
+{% extends "omanba/index.html" %}
+{% block content %}
+<p align = "center">Politics</p>
+
+{% for item in politics_items %}
+{{ item.title }}
+
+
+{% endfor %}
+{% endblock %}
