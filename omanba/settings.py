@@ -1,3 +1,7 @@
+import os
+PROJECT_ROOT = os.path.realpath(os.path.dirname(__file__))
+
+
 # Django settings for omanba project.
 
 DEBUG = True
@@ -69,10 +73,9 @@ ADMIN_MEDIA_PREFIX = '/static/admin/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-    # Put strings here, like "/home/html/static" or "C:/www/django/static".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
+    os.path.join(PROJECT_ROOT, 'static'),
 )
+
 
 # List of finder classes that know how to find static files in
 # various locations.
@@ -102,12 +105,9 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'omanba.urls'
 
+ 
 TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
-    "/home/aj/Omanba/omanba/templates"
-
+    os.path.join(PROJECT_ROOT, 'templates')
 )
 
 INSTALLED_APPS = (
