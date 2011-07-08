@@ -10,23 +10,25 @@ class Article(models.Model):
 	date_created=models.DateTimeField(auto_now=True)
 	body= models.TextField()
 	ARTICLE_CHOICES=(('news', 'News'), ('lifestyle', 'Lifestyle'), ('politics', 'Politics'), ('extras', 'Extras'), ('sports', 'Sports'),)
-	article_type=models.CharField(max_length=6, choices=ARTICLE_CHOICES)
+	article_type=models.CharField(max_length=60, choices=ARTICLE_CHOICES)
 	def __unicode__(self):
 		return self.title
 
 
-class Extras(models.Model):
-	extras_title=models.CharField(max_length=200)
-	extras_headlines=models.CharField(max_length=300)
-	extras_date=models.DateTimeField('date published')
-	extras_body=models.TextField()
-	def __unicode__(self):
-		return self.extras_title
+#class Extras(models.Model):
+#	extras_title=models.CharField(max_length=200)
+#	extras_headlines=models.CharField(max_length=300)
+#	extras_date=models.DateTimeField('date published')
+#	extras_body=models.TextField()
+#	def __unicode__(self):
+#		return self.extras_title
 
 class Gh_Vid(models.Model):
-	gh_vid_title=models.CharField(max_length=200)
+	gh_vid_title=models.CharField('videotitle', max_length=200)
 	gh_vid_body=models.TextField()
-	gh_file = models.FileField(upload_to='home/aiti/Desktop/')
+	gh_file = models.FileField(upload_to='videos')
+	date_added=models.DateTimeField(auto_now=True)
+	flvfilename = models.CharField( max_length=250, blank=True, null=True )
 	def __unicode__(self):
 		return self.gh_vid_title
 	
@@ -59,7 +61,7 @@ class Gh_VidAdmin(admin.ModelAdmin):
 
 >>>>>>> 34fb685c878539a18e830eacc34a76d8712cc3a5
 admin.site.register(Article)
-admin.site.register(Extras)
+#admin.site.register(Extras)
 admin.site.register(Gh_Vid)
 <<<<<<< HEAD
 admin.site.register(Donate)

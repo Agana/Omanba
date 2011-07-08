@@ -3,7 +3,7 @@
 <p align = "center">Politics</p>
 
 {% for item in politics_items %}
-{{ item.title }}
+<li><a href = "/omanba/politicsdetail/{{ item.id }}">{{ item.title }}</a></li>
 
 
 {% endfor %}
