@@ -1,0 +1,13 @@
+{% extends "omanba/index.html" %}
+{% block content %}
+<p align = "center">Lifestyle</p>
+
+{% for item in lifestyle_detail %}
+<ul>
+<p>{{ item.headline }}</p>
+<p>{{ item.date_created }}</p>
+<p>{{ item.body }}</p>
+</ul>
+{% endfor %}
+
+{% endblock %}

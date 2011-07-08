@@ -36,8 +36,8 @@ def politics_list(request, limit=15):
 	return render_to_response('omanba/politicslist.html', {'politics_items': politics_items})
 
 def gh_vid_list(request, limit=15):
-	gh_vid_list=Gh_Vid.objects.all()
-	return HttpResponse("You're at the video list")
+	gh_vid_items=Gh_Vid.objects.all()
+	return render_to_response('omanba/videolist.html', {'gh_vid_items': gh_vid_items})
 
 def extras_list(request, limit=15):
 	extras_list=Extras.objects.all()
@@ -53,6 +53,24 @@ def donation_list(request, limit=15):
 def news_detail(request, id, limit=15):
 	news_detail=Article.objects.filter(article_type='news', id=id)
 	return render_to_response('omanba/newsdetail.html', {'news_detail': news_detail})
+
+def sports_detail(request, id, limit=15):
+	sports_detail=Article.objects.filter(article_type='sports', id=id)
+	return render_to_response('omanba/sportsdetail.html', {'sports_detail': sports_detail})
+
+def lifestyle_detail(request, id, limit=15):
+	lifestyle_detail=Article.objects.filter(article_type='lifestyle', id=id)
+	return render_to_response('omanba/lifestyledetail.html', {'lifestyle_detail': lifestyle_detail})
+
+def politics_detail(request, id, limit=15):
+	politics_detail=Article.objects.filter(article_type='politics', id=id)
+	return render_to_response('omanba/politicsdetail.html', {'politics_detail': politics_detail})
+
+def gh_vid_detail(request, id, limit=15):
+	gh_vid_detail=Gh_Vid.objects.filter(id=id)
+	return render_to_response('omanba/videodetail.html', {'gh_vid_detail': gh_vid_detail})
+
+#converting the video
 
 
 # Home Page
