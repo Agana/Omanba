@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+dfsdlfkjsdklfjsklj
+=======
 from django.template import Context, loader
 from django.http import HttpResponse
 from models import *
@@ -78,3 +81,4 @@ def index(request):
 	c = Context({'article_list':article_list,'user':str(request.user)})
 	return HttpResponse(t.render(c))
 	return HttpResponse("Hi there")
+>>>>>>> 365590b09c26d16a793c3ea7a737b86e17bd9314

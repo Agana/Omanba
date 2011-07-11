@@ -127,6 +127,8 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #'omanba',
+
     'django_facebook',
     'omanba_app',
     'users',
