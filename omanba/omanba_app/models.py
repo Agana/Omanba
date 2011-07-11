@@ -50,8 +50,6 @@ class Donation(models.Model):
 
 
 
-
-
 class ExtrasAdmin(admin.ModelAdmin):
 	list_display=('extras_title','extras_headlines','extras_body')
 
