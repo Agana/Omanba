@@ -127,15 +127,9 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-<<<<<<< HEAD
-<<<<<<< HEAD
     #'omanba',
-=======
 
->>>>>>> 34fb685c878539a18e830eacc34a76d8712cc3a5
-=======
     'django_facebook',
->>>>>>> 365590b09c26d16a793c3ea7a737b86e17bd9314
     'omanba_app',
     'users',
     'django.contrib.webdesign',

@@ -48,19 +48,14 @@ class Donation(models.Model):
 	def render_donate_image(self):
 		return self.donation_image.url
 
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> 34fb685c878539a18e830eacc34a76d8712cc3a5
 class ExtrasAdmin(admin.ModelAdmin):
 	list_display=('extras_title','extras_headlines','extras_body')
 
 
-<<<<<<< HEAD
-=======
 class DonateAdmin(admin.ModelAdmin):
 	list_display=('project_title','project_author','project_body')
 
@@ -68,20 +63,12 @@ class Gh_VidAdmin(admin.ModelAdmin):
 	list_display=('gh_vid_title','gh_file','gh_vid_body')
 
 
->>>>>>> 34fb685c878539a18e830eacc34a76d8712cc3a5
 admin.site.register(Article)
 #admin.site.register(Extras)
 admin.site.register(Gh_Vid)
-<<<<<<< HEAD
 admin.site.register(Donate)
-<<<<<<< HEAD
 admin.site.register(Gh_Vid,Gh_VidAdmin)
 admin.site.register(Extras,ExtrasAdmin)
 admin.site.register(Donate,DonateAdmin)
 admin.site.register(Article)
-=======
->>>>>>> 34fb685c878539a18e830eacc34a76d8712cc3a5
-=======
 admin.site.register(Donation)
->>>>>>> d8d46ee45de97530337c614eeb79eba4ad9b4dd1
-
