@@ -1,0 +1,27 @@
+{% extends "facebook/index.html" %}
+    <script src="http://connect.facebook.net/en_US/all.js"></script>  
+    <script>  
+    facebookAppId = '{{ 231302310226288 }}';  
+    function facebookJSLoaded(){  
+    FB.init({appId: facebookAppId, status: false, cookie: true, xfbml: true});  
+    }  
+    window.fbAsyncInit = facebookJSLoaded;  
+    F = new facebookClass(facebookAppId);  
+    F.load();  
+    </script>  
+
+    <form action="{% url facebook_connect %}?facebook_login=1" method="post">  
+    <a href="javascript:void(0);" style="font-size: 20px;" onclick="F.connect(this.parentNode);">Register, login or connect with facebook</a>  
+    <input type="hidden" value="{{ request.path }}" name="next" />  
+    </form>  
+    <div id="fb-root"></div>  
+{% block content %}
+<p align = "center">Login with Facebook</p>
+
+{% for item in connect %}
+<ul>
+<p>{{ item.profile_name }}</p>
+</ul>
+{% endfor %}
+<ul><p><img width="50" height="40" src="/static/facebook-logo2.png" />&nbsp<img width="50" height="40" src="/static/Twitter-Logo2.jpg" />&nbsp<img width="45" height="40" src="/static/email.png" /></p></p></ul>
+{% endblock %}

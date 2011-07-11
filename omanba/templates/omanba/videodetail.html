@@ -5,15 +5,22 @@
 {% for item in gh_vid_detail %}
 
 <ul>
+<p><img src="" /></p>
 <p>{{ item.gh_vid_title }}</p>
 <p>{{ item.date_added }}</p>
-<p>{{item.gh_vid_body }}</p>
+
 <video width="320" height="240" controls="controls">
-  <source src="http://localhost:8000/static/video_test.ogv" type="video/ogg" />
+  <source src="/{{ item.render_video }}" type="video/ogg" />
   Your browser does not support the video tag.
 </video>
-
+{% load webdesign %}
+{% lorem 1 p %}
 </ul>
 {% endfor %}
-
+<ul><p><a href="http://twitter.com/share" class="twitter-share-button" data-count="vertical" data-via="AganaAgana">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></a>&nbsp
+</p>
+<p><iframe src="https://www.facebook.com/plugins/like.php?href=http://localhost:8000/omanba/videodetail/1/"
+        scrolling="no" frameborder="0"
+        style="border:none; width:450px; height:80px"></iframe>
+</p></ul>
 {% endblock %}

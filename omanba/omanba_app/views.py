@@ -20,32 +20,28 @@ def article_list(request, limit=15):
 # Lists for each article type
 
 def news_list(request, limit=15):
-	news_items=Article.objects.filter(article_type='news')
+	news_items=Article.objects.filter(article_type='news').order_by('-date_created')
 	return render_to_response('omanba/newslist.html', {'news_items': news_items})
 
 def sports_list(request, limit=15):
-	sports_items=Article.objects.filter(article_type='sports')
+	sports_items=Article.objects.filter(article_type='sports').order_by('-date_created')
 	return render_to_response('omanba/sportslist.html', {'sports_items': sports_items})
 
 def lifestyle_list(request, limit=15):
-	lifestyle_items=Article.objects.filter(article_type='lifestyle')
+	lifestyle_items=Article.objects.filter(article_type='lifestyle').order_by('-date_created')
 	return render_to_response('omanba/lifestylelist.html', {'lifestyle_items': lifestyle_items})
 
 def politics_list(request, limit=15):
-	politics_items=Article.objects.filter(article_type='politics')
+	politics_items=Article.objects.filter(article_type='politics').order_by('-date_created')
 	return render_to_response('omanba/politicslist.html', {'politics_items': politics_items})
 
 def gh_vid_list(request, limit=15):
-	gh_vid_items=Gh_Vid.objects.all()
+	gh_vid_items=Gh_Vid.objects.all().order_by('-date_added')
 	return render_to_response('omanba/videolist.html', {'gh_vid_items': gh_vid_items})
 
-def extras_list(request, limit=15):
-	extras_list=Extras.objects.all()
-	return HttpResponse("You're at extras list")
-
 def donation_list(request, limit=15):
-	donation_list=Donation.objects.all()
-	return HttpResponse("You're at the donations list")
+	donation_items=Donation.objects.all().order_by('-date_project_added')
+	return render_to_response('omanba/donationlist.html', {'donation_items': donation_items})
 
 
 # Details for each article type
@@ -70,6 +66,9 @@ def gh_vid_detail(request, id, limit=15):
 	gh_vid_detail=Gh_Vid.objects.filter(id=id)
 	return render_to_response('omanba/videodetail.html', {'gh_vid_detail': gh_vid_detail})
 
+def donation_detail(request, id, limit=15):
+	donation_detail=Donation.objects.filter(id=id)
+	return render_to_response('omanba/donationdetail.html', {'donation_detail': donation_detail})
 #converting the video
 
 

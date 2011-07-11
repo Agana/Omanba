@@ -1,0 +1,11 @@
+{% extends "facebook/index.html" %}
+{% block content %}
+<p align = "center">News</p>
+
+{% for item in connect_view %}
+<ul>
+<p>{{ item.profile_name }}</p>
+</ul>
+{% endfor %}
+<ul><p><img width="50" height="40" src="/static/facebook-logo2.png" />&nbsp<img width="50" height="40" src="/static/Twitter-Logo2.jpg" />&nbsp<img width="45" height="40" src="/static/email.png" /></p></p></ul>
+{% endblock %}

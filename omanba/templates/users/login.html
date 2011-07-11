@@ -1,0 +1,13 @@
+<html>
+<head><title>Login to Omanba</title>
+<body>
+<a href='/omanba/articles'>Login to Omanba</a>
+{% if logged_in %}
+You're already logged in.<a href="/users/logout/">Logout</a>
+{% endif %}
+<form action="." method="post">
+{{ form.as_p }}
+<input type="submit" value="Submit" />
+</form>
+</body>
+</html>

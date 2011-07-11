@@ -110,6 +110,16 @@ TEMPLATE_DIRS = (
     os.path.join(PROJECT_ROOT, 'templates')
 )
 
+TEMPLATE_CONTEXT_PROCESSORS = (
+    "django.contrib.auth.context_processors.auth",
+    "django.core.context_processors.debug",
+    "django.core.context_processors.i18n",
+    "django.core.context_processors.media",
+    "django.core.context_processors.static",
+    "django.contrib.messages.context_processors.messages",
+    
+)
+
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -117,14 +127,19 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
+    'django_facebook',
     'omanba_app',
-
+    'users',
+    'django.contrib.webdesign',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
+
+FACEBOOK_API_KEY = ('22604ec6b60cb122acb7d6cbf8e446ef')
+FACEBOOK_APP_ID = ( '231302310226288',)
+FACEBOOK_APP_SECRET = ('b4e5532c38bdfd96976212d8950e1ca3')
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to

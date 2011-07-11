@@ -1,0 +1,10 @@
+{% extends "omanba/index.html" %}
+{% block content %}
+<p align = "center">The Patriots' Page</p>
+
+{% for item in donation_items %}
+<li><a href = "/omanba/donationdetail/{{ item.id }}">{{ item.project_title }}</a></li>
+
+
+{% endfor %}
+{% endblock %}
