@@ -1,0 +1,17 @@
+.tophead {
+    background: url("http://m.kayak.com/mweb/images/bgsprite2.png") repeat scroll 0 -559px transparent;
+    height: 42px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+}
+
+.bottombar {
+    background: url("http://m.kayak.com/mweb/images/bgsprite2.png") repeat scroll 0 -559px transparent;
+    height: 42px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+}

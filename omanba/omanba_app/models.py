@@ -64,9 +64,5 @@ class Gh_VidAdmin(admin.ModelAdmin):
 admin.site.register(Article)
 #admin.site.register(Extras)
 admin.site.register(Gh_Vid)
-admin.site.register(Donate)
-admin.site.register(Gh_Vid,Gh_VidAdmin)
-admin.site.register(Extras,ExtrasAdmin)
-admin.site.register(Donate,DonateAdmin)
-admin.site.register(Article)
 admin.site.register(Donation)
+

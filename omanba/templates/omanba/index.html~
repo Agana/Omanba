@@ -8,7 +8,7 @@
 {% block content %}
 
 {% endblock %}
-<p class="tophead">Omanba</p>
-<div class="tophead">All rights reserved 2011</div>
+<p class="bottombar">Omanba</p>
+<div class="bottombar">All rights reserved 2011</div>
 </html>
 
